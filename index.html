@@ -9,25 +9,24 @@
             font-family: 'Intro';
             src: url('intro.otf') format('opentype');
         }
+body {
+    background: url('fon.png') no-repeat center center fixed;
+    background-size: cover; /* Растягивает изображение на весь экран */
+    color: #fff;
+    font-family: 'Intro', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    scroll-behavior: smooth;
+}
 
-        body {
-            background: #000;
-            background-size: 600% 600%;
-            animation: Gradient 16s ease infinite;
-            color: #fff;
-            font-family: 'Intro', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            padding-top: 60px;
-            padding-bottom: 50px;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            scroll-behavior: smooth;
-        }
         @keyframes Gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -586,6 +585,38 @@
         .close-button-mini:hover {
             color: #f00; /* Красный цвет при наведении */
         }
+    .telegram-button {
+    display: flex;
+    justify-content: center; /* Центрирование кнопки по горизонтали */
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    width: 300px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #3a8ccf 0%, #00397a 100%);
+    box-shadow: 0 6px #082d53, 0 -6px #3a8ccf inset;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    font-family: 'Intro', Arial, sans-serif;
+    margin: 20px auto; /* Отступы сверху и снизу и центрирование по горизонтали */
+}
+
+.telegram-button:hover {
+    background: linear-gradient(145deg, #00397a 0%, #3a8ccf 100%);
+    box-shadow: 0 8px #082d53, 0 -6px #3a8ccf inset;
+    transform: translateY(-3px);
+}
+
+.telegram-button:active {
+    box-shadow: 0 3px #082d53, 0 -3px #3a8ccf inset;
+    transform: translateY(2px);
+}
+
+
+
     </style>
 </head>
 <body>
@@ -598,8 +629,9 @@
         <div class="about-text">
             <h2>MURDER SIGNALS</h2>
             <span class="typing-text"></span>
-            <button onclick="window.location.href='https://t.me/murdersignals';" class="about-button">Go to telegram</button>
-        </div>
+            <button class="telegram-button" onclick="window.location.href='https://t.me/murdersignals';">Go to telegram</button>
+
+    </div>
     </div>
 <div id="Contact" class="tabcontent">
     <div class="image-container">
